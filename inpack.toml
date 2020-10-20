@@ -1,0 +1,31 @@
+[project]
+name = "coder-code-server"
+version = "3.6.1"
+vendor = "coder.com"
+dist = "linux"
+arch = "x64"
+homepage = "https://coder.com/"
+description = "VS Code in the browser"
+groups = ["app/prod"]
+
+[scripts]
+
+build = """
+PREFIX="/opt/coder/code-server"
+
+cd {{.inpack__pack_dir}}/deps
+
+if [ ! -f "code-server-{{.project__version}}-linux-amd64.tar.gz" ]; then
+  wget "https://github.com/cdr/code-server/releases/download/v{{.project__version}}/code-server-{{.project__version}}-linux-amd64.tar.gz"
+fi
+
+
+if [ ! -d "code-server-{{.project__version}}-linux-amd64" ]; then
+  tar zxf code-server-{{.project__version}}-linux-amd64.tar.gz
+fi
+
+rsync -av code-server-{{.project__version}}-linux-amd64/* {{.buildroot}}/ 
+
+mkdir -p {{.buildroot}}/etc
+mkdir -p {{.buildroot}}/var/log
+"""
