@@ -101,5 +101,5 @@ cert: false"""
   
 [[urls]]
   name = "gdoc"
-  url = "https://www.sysinner.cn/gdoc/view/app-guide/coder-code-server/x1.md"
+  url = "https://www.sysinner.cn/gdoc/view/app-guide/coder/code-server.md"
 
