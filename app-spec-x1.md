@@ -16,7 +16,7 @@ type_tags = ["devops"]
   name = "coder-code-server-main"
   exec_start = """
 DAEMON=/opt/coder/code-server/bin/code-server
-DAEMON_ARGS="--config /opt/coder/code-server/etc/config.yaml"
+DAEMON_ARGS="--config /opt/coder/code-server/etc/config.yaml --disable-telemetry"
 NAME=/opt/coder/code-server/lib/node
 
 if pidof $NAME; then
