@@ -1,6 +1,6 @@
 [project]
 name = "coder-code-server"
-version = "3.7.3"
+version = "3.7.4"
 vendor = "coder.com"
 dist = "linux"
 arch = "x64"

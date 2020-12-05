@@ -10,13 +10,13 @@ type_tags = ["devops"]
 
 [[packages]]
   name = "coder-code-server"
-  version = "3.6"
+  version = "3.7"
 
 [[executors]]
   name = "coder-code-server-main"
   exec_start = """
 DAEMON=/opt/coder/code-server/bin/code-server
-DAEMON_ARGS="--config /opt/coder/code-server/etc/config.yaml --disable-telemetry"
+DAEMON_ARGS="--config /opt/coder/code-server/etc/config.yaml --disable-telemetry --disable-update-check"
 NAME=/opt/coder/code-server/lib/node
 
 if pidof $NAME; then
