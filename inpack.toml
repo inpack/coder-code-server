@@ -28,4 +28,6 @@ rsync -av code-server-{{.project__version}}-linux-amd64/* {{.buildroot}}/
 
 mkdir -p {{.buildroot}}/etc
 mkdir -p {{.buildroot}}/var/log
+
+rm -fr code-server-{{.project__version}}-linux-amd64
 """
