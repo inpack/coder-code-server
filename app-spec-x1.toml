@@ -10,7 +10,7 @@ type_tags = ["devops"]
 
 [[packages]]
   name = "coder-code-server"
-  version = "3.7"
+  version = "3.8"
 
 [[executors]]
   name = "coder-code-server-main"
